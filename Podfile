@@ -1,5 +1,4 @@
-pod 'libHN'
 pod 'ViewUtils'
 pod 'POP+MCAnimate'
 pod 'pop'
-pod 'TWTToast/UIKit/ViewControllerTransitions'
+pod 'JSQMessagesViewController'

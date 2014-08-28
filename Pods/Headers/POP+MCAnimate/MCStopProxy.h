@@ -1,1 +1,0 @@
-../../POP+MCAnimate/POP+MCAnimate/Animations/MCStopProxy.h
