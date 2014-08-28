@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBC66B80FDD7459AACC92866"
-               BuildableName = "libPods-TWTToast.a"
-               BlueprintName = "Pods-TWTToast"
+               BlueprintIdentifier = "A28D3B375F234258A3AC828D"
+               BuildableName = "libPods-JSQMessagesViewController.a"
+               BlueprintName = "Pods-JSQMessagesViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

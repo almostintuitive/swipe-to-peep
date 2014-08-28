@@ -4,81 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-POP+MCAnimate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-TWTToast.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-ViewUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>Pods-libHN.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>0D83BA0BD53F4001A70FEB2A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2EC1F969937F4984B6F0F2BE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>340EC813A5A345EFAF04F3A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>902C30CD0BD949DEAF2B82FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D51D72CF965E4548A8C01A93</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBC66B80FDD7459AACC92866</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

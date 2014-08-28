@@ -1,5 +1,7 @@
 PODS:
-  - libHN (2.0.0)
+  - JSQMessagesViewController (5.2.5):
+    - JSQSystemSoundPlayer
+  - JSQSystemSoundPlayer (1.5.2)
   - pop (1.0.6)
   - POP+MCAnimate (1.1):
     - pop (~> 1.0)
@@ -23,21 +25,19 @@ PODS:
   - POP+MCAnimate/Velocity (1.1):
     - pop (~> 1.0)
     - POP+MCAnimate/Internal
-  - TWTToast/UIKit/ViewControllerTransitions (0.11)
   - ViewUtils (1.1.2)
 
 DEPENDENCIES:
-  - libHN
+  - JSQMessagesViewController
   - pop
   - POP+MCAnimate
-  - TWTToast/UIKit/ViewControllerTransitions
   - ViewUtils
 
 SPEC CHECKSUMS:
-  libHN: ef836ef635e35a17936ed7d638b5bda007a2d2b6
+  JSQMessagesViewController: ca64d32c789ac8e95b3bfb28171ff0afecf2b27b
+  JSQSystemSoundPlayer: c24914bc96ff5365b5d28b59d7ecffd60d1c5587
   pop: e518794da38942c05255eb64b36d894e70cb4f00
   POP+MCAnimate: 3ad540606cbf21547f79585c8d5b63f9da69d52b
-  TWTToast: a76a7440c6abe23e5b4793dc50012139388cacba
   ViewUtils: 11aaceb3b215b3d051c2f00ae143133a71095365
 
 COCOAPODS: 0.33.1
