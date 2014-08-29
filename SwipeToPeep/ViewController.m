@@ -59,7 +59,7 @@
     cell.previewLabel.text = self.threadMsgDescriptionArray[indexPath.row];
     
     cell.profileImageView.image = [UIImage imageNamed:@"profile.png"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     [cell configureSwipeableCell];
 

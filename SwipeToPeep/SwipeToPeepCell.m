@@ -89,17 +89,21 @@
 
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint point = [gestureRecognizer velocityInView:nil];
-    
-    if (point.x > 0) {
+    if ([gestureRecognizer class] == [UIPanGestureRecognizer class]) {
+        CGPoint point = [gestureRecognizer velocityInView:nil];
+        
+        if (point.x > 0) {
+            return NO;
+        }
+        
+        if (fabsf(point.x) > fabsf(point.y) ) {
+            return YES;
+        }
+        
         return NO;
     }
-    
-    if (fabsf(point.x) > fabsf(point.y) ) {
-        return YES;
-    }
-    
     return NO;
+
 }
 
 #pragma mark Private methods
