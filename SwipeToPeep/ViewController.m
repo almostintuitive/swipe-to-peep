@@ -11,13 +11,13 @@
 #define MCANIMATE_SHORTHAND
 #import <POP+MCAnimate.h>
 #import "SwipeToPeepCell.h"
-#import "HNPostView.h"
+#import "MessagesView.h"
 #import "CircleProfileImageView.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) HNPostView *postWebView;
+@property (nonatomic) MessagesView *postWebView;
 @property (nonatomic) NSArray *threadMsgImagesArray;
 @property (nonatomic) NSArray *threadMsgNamesArray;
 @property (nonatomic) NSArray *threadMsgDescriptionArray;
@@ -83,10 +83,10 @@
 
 - (void)swipeableCellDidStartSwiping:(SwipeToPeepCell *)cell {
     
-    self.postWebView = [[HNPostView alloc] initWithFrame:self.view.bounds];
+    self.postWebView = [[MessagesView alloc] initWithFrame:self.view.bounds];
     self.postWebView.center = CGPointMake(self.view.bounds.size.width+self.view.center.x, self.view.center.y);
     self.postWebView.swipeDelegate = self;
-    self.postWebView.image = cell.conversationImage;
+    self.postWebView.conversationText = cell.previewLabel.text;
     [self.view addSubview:self.postWebView];
     
     self.tableView.spring.alpha = 1;
@@ -124,12 +124,12 @@
 #pragma mark PostView delegate
 
 
-- (void)postViewDidStartSwiping:(HNPostView *)postView {
+- (void)postViewDidStartSwiping:(MessagesView *)postView {
     self.tableView.spring.alpha = 0;
     self.tableView.center = CGPointMake(0, self.view.center.y);
 }
 
-- (void)postView:(HNPostView *)postView didSwipeWithHorizontalPosition:(CGFloat)horizontalPosition progress:(float)progress {
+- (void)postView:(MessagesView *)postView didSwipeWithHorizontalPosition:(CGFloat)horizontalPosition progress:(float)progress {
     self.tableView.spring.alpha = progress;
     self.tableView.spring.center = CGPointMake(self.view.center.x*progress, self.view.center.y);
     self.postWebView.spring.center = CGPointMake(self.view.center.x+(self.view.bounds.size.width*progress), self.view.center.y);
@@ -137,7 +137,7 @@
 }
 
 
-- (void)postViewCancelledSwiping:(HNPostView *)postView {
+- (void)postViewCancelledSwiping:(MessagesView *)postView {
     self.tableView.spring.alpha = 0;
     self.tableView.spring.center = CGPointMake(0, self.view.center.y);
     self.postWebView.spring.center = self.view.center;
@@ -145,7 +145,7 @@
 }
 
 
-- (void)postViewCompletedSwiping:(HNPostView *)postView {
+- (void)postViewCompletedSwiping:(MessagesView *)postView {
     self.tableView.scrollEnabled = YES;
     
     [NSObject animate:^{

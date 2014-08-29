@@ -6,18 +6,20 @@
 //  Copyright (c) 2014 itchingpixels. All rights reserved.
 //
 
-#import "HNPostView.h"
+#import "MessagesView.h"
 #define MCANIMATE_SHORTHAND
 #import <POP+MCAnimate.h>
+#import "SpeechBubbleLabel.h"
 
+@interface MessagesView ()
 
-@interface HNPostView ()
-
-@property (nonatomic) UIImageView *imageView;
+@property (nonatomic) SpeechBubbleLabel *speechBubble;
 
 @end
 
-@implementation HNPostView
+
+
+@implementation MessagesView
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -30,13 +32,13 @@
     [self addGestureRecognizer:panEdgeRecognizer];
 }
 
-
-- (void)setImage:(UIImage *)image {
-    self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageView.image = image;
-    [self addSubview:self.imageView];
+- (void)setConversationText:(NSString *)conversationText {
+    self.speechBubble = [[SpeechBubbleLabel alloc] initWithFrame:CGRectInset(self.bounds, 40, 40) andText:conversationText];
+    [self addSubview:self.speechBubble];
+    
 }
+
+
 
 
 - (void)pan:(UIScreenEdgePanGestureRecognizer*)gestureRecognizer {

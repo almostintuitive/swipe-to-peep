@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C216DFC19AFF54300FAF69F /* thread-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C216DF919AFF54300FAF69F /* thread-1.jpg */; };
-		0C216DFD19AFF54300FAF69F /* thread-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C216DFA19AFF54300FAF69F /* thread-2.jpg */; };
-		0C216DFE19AFF54300FAF69F /* thread-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C216DFB19AFF54300FAF69F /* thread-3.jpg */; };
 		0C216E0019B0763900FAF69F /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C216DFF19B0763900FAF69F /* profile.png */; };
 		0C216E0319B07D8D00FAF69F /* CircleProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */; };
 		0C80596319AB97D70066C202 /* SwipeToPeepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C80596219AB97D70066C202 /* SwipeToPeepCell.m */; };
@@ -29,7 +26,8 @@
 		0C82F7EB19AB5ED000BD7259 /* swipeToPeepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C82F7EA19AB5ED000BD7259 /* swipeToPeepTests.m */; };
 		0C9A0CFC19AB66D800AE69A1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A0CFB19AB66D800AE69A1 /* Twitter.framework */; };
 		0C9A0CFE19AB670400AE69A1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A0CFD19AB670400AE69A1 /* Accounts.framework */; };
-		0CF881B619ABBAF600C4D76C /* HNPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF881B519ABBAF600C4D76C /* HNPostView.m */; };
+		0CDD841719B0F667004AD8FA /* SpeechBubbleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */; };
+		0CF881B619ABBAF600C4D76C /* MessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF881B519ABBAF600C4D76C /* MessagesView.m */; };
 		69D7403613064E419C79C717 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6E057659E14BF9B56D644D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C216DF919AFF54300FAF69F /* thread-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thread-1.jpg"; sourceTree = "<group>"; };
-		0C216DFA19AFF54300FAF69F /* thread-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thread-2.jpg"; sourceTree = "<group>"; };
-		0C216DFB19AFF54300FAF69F /* thread-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thread-3.jpg"; sourceTree = "<group>"; };
 		0C216DFF19B0763900FAF69F /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		0C216E0119B07D8D00FAF69F /* CircleProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleProfileImageView.h; path = SwipeToPeep/CircleProfileImageView.h; sourceTree = SOURCE_ROOT; };
 		0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleProfileImageView.m; path = SwipeToPeep/CircleProfileImageView.m; sourceTree = SOURCE_ROOT; };
@@ -73,8 +68,10 @@
 		0C82F7EA19AB5ED000BD7259 /* swipeToPeepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swipeToPeepTests.m; sourceTree = "<group>"; };
 		0C9A0CFB19AB66D800AE69A1 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0C9A0CFD19AB670400AE69A1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		0CF881B419ABBAF600C4D76C /* HNPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNPostView.h; sourceTree = "<group>"; };
-		0CF881B519ABBAF600C4D76C /* HNPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNPostView.m; sourceTree = "<group>"; };
+		0CDD841519B0F667004AD8FA /* SpeechBubbleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechBubbleLabel.h; path = SwipeToPeep/SpeechBubbleLabel.h; sourceTree = SOURCE_ROOT; };
+		0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechBubbleLabel.m; path = SwipeToPeep/SpeechBubbleLabel.m; sourceTree = SOURCE_ROOT; };
+		0CF881B419ABBAF600C4D76C /* MessagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesView.h; sourceTree = "<group>"; };
+		0CF881B519ABBAF600C4D76C /* MessagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesView.m; sourceTree = "<group>"; };
 		5E6E057659E14BF9B56D644D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7469D0AAB160418D822CA244 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +106,10 @@
 		0C2C707819AD3BF500C51E56 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0CF881B419ABBAF600C4D76C /* HNPostView.h */,
-				0CF881B519ABBAF600C4D76C /* HNPostView.m */,
+				0CDD841519B0F667004AD8FA /* SpeechBubbleLabel.h */,
+				0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */,
+				0CF881B419ABBAF600C4D76C /* MessagesView.h */,
+				0CF881B519ABBAF600C4D76C /* MessagesView.m */,
 				0C82F7D419AB5ECF00BD7259 /* ViewController.h */,
 				0C82F7D519AB5ECF00BD7259 /* ViewController.m */,
 			);
@@ -154,9 +153,6 @@
 		0C82F7C219AB5ECF00BD7259 /* SwipeToPeep */ = {
 			isa = PBXGroup;
 			children = (
-				0C216DF919AFF54300FAF69F /* thread-1.jpg */,
-				0C216DFA19AFF54300FAF69F /* thread-2.jpg */,
-				0C216DFB19AFF54300FAF69F /* thread-3.jpg */,
 				0C216DFF19B0763900FAF69F /* profile.png */,
 				0C80596119AB97D70066C202 /* SwipeToPeepCell.h */,
 				0C80596219AB97D70066C202 /* SwipeToPeepCell.m */,
@@ -282,11 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C82F7D819AB5ECF00BD7259 /* Images.xcassets in Resources */,
-				0C216DFD19AFF54300FAF69F /* thread-2.jpg in Resources */,
-				0C216DFC19AFF54300FAF69F /* thread-1.jpg in Resources */,
 				0C82F7D019AB5ECF00BD7259 /* Main_iPhone.storyboard in Resources */,
 				0C82F7C719AB5ECF00BD7259 /* InfoPlist.strings in Resources */,
-				0C216DFE19AFF54300FAF69F /* thread-3.jpg in Resources */,
 				0C216E0019B0763900FAF69F /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +334,9 @@
 			files = (
 				0C82F7D619AB5ECF00BD7259 /* ViewController.m in Sources */,
 				0C82F7CD19AB5ECF00BD7259 /* AppDelegate.m in Sources */,
-				0CF881B619ABBAF600C4D76C /* HNPostView.m in Sources */,
+				0CF881B619ABBAF600C4D76C /* MessagesView.m in Sources */,
 				0C80596319AB97D70066C202 /* SwipeToPeepCell.m in Sources */,
+				0CDD841719B0F667004AD8FA /* SpeechBubbleLabel.m in Sources */,
 				0C216E0319B07D8D00FAF69F /* CircleProfileImageView.m in Sources */,
 				0C82F7C919AB5ECF00BD7259 /* main.m in Sources */,
 			);
