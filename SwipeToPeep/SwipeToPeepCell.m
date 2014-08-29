@@ -25,12 +25,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.backgroundColor = [UIColor flatMintColor];
-        
-        self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  80)];
-        self.interactiveBackground.backgroundColor = [UIColor whiteColor];
-        self.interactiveBackground.alpha = 0;
-        [self insertSubview:self.interactiveBackground atIndex:0];
+        self.backgroundColor = [UIColor whiteColor];
         
         self.nameLabel.textColor = [UIColor whiteColor];
         self.nameLabel.backgroundColor = [UIColor clearColor];
@@ -116,7 +111,7 @@
 
 - (void)didMoveToSuperview {
     self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  self.bounds.size.height)];
-    self.interactiveBackground.backgroundColor = [UIColor whiteColor];
+    self.interactiveBackground.backgroundColor = [UIColor flatGrayColor];
     self.interactiveBackground.alpha = 0;
     [self insertSubview:self.interactiveBackground atIndex:0];
 }

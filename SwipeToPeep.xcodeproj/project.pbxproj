@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C216E0019B0763900FAF69F /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C216DFF19B0763900FAF69F /* profile.png */; };
 		0C216E0319B07D8D00FAF69F /* CircleProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */; };
 		0C80596319AB97D70066C202 /* SwipeToPeepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C80596219AB97D70066C202 /* SwipeToPeepCell.m */; };
 		0C82F7BD19AB5ECF00BD7259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C82F7BC19AB5ECF00BD7259 /* Foundation.framework */; };
@@ -28,6 +27,11 @@
 		0C9A0CFE19AB670400AE69A1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A0CFD19AB670400AE69A1 /* Accounts.framework */; };
 		0CDD841719B0F667004AD8FA /* SpeechBubbleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */; };
 		0CDD841A19B1074D004AD8FA /* SwipeToPeep-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841819B1074D004AD8FA /* SwipeToPeep-Info.plist */; };
+		0CDD842119B11A67004AD8FA /* mrblonde.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841C19B11A67004AD8FA /* mrblonde.jpg */; };
+		0CDD842219B11A67004AD8FA /* mrblue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841D19B11A67004AD8FA /* mrblue.jpg */; };
+		0CDD842319B11A67004AD8FA /* mrbrown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841E19B11A67004AD8FA /* mrbrown.jpg */; };
+		0CDD842419B11A67004AD8FA /* mrorange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841F19B11A67004AD8FA /* mrorange.jpg */; };
+		0CDD842519B11A67004AD8FA /* mrwhite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD842019B11A67004AD8FA /* mrwhite.jpg */; };
 		0CF881B619ABBAF600C4D76C /* MessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF881B519ABBAF600C4D76C /* MessagesView.m */; };
 		69D7403613064E419C79C717 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6E057659E14BF9B56D644D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -43,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C216DFF19B0763900FAF69F /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		0C216E0119B07D8D00FAF69F /* CircleProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleProfileImageView.h; path = SwipeToPeep/CircleProfileImageView.h; sourceTree = SOURCE_ROOT; };
 		0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleProfileImageView.m; path = SwipeToPeep/CircleProfileImageView.m; sourceTree = SOURCE_ROOT; };
 		0C80596119AB97D70066C202 /* SwipeToPeepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeToPeepCell.h; sourceTree = "<group>"; };
@@ -71,6 +74,11 @@
 		0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechBubbleLabel.m; path = SwipeToPeep/SpeechBubbleLabel.m; sourceTree = SOURCE_ROOT; };
 		0CDD841819B1074D004AD8FA /* SwipeToPeep-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SwipeToPeep-Info.plist"; path = "SwipeToPeep/SwipeToPeep-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0CDD841919B1074D004AD8FA /* SwipeToPeep-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SwipeToPeep-Prefix.pch"; path = "SwipeToPeep/SwipeToPeep-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		0CDD841C19B11A67004AD8FA /* mrblonde.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mrblonde.jpg; sourceTree = "<group>"; };
+		0CDD841D19B11A67004AD8FA /* mrblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mrblue.jpg; sourceTree = "<group>"; };
+		0CDD841E19B11A67004AD8FA /* mrbrown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mrbrown.jpg; sourceTree = "<group>"; };
+		0CDD841F19B11A67004AD8FA /* mrorange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mrorange.jpg; sourceTree = "<group>"; };
+		0CDD842019B11A67004AD8FA /* mrwhite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mrwhite.jpg; sourceTree = "<group>"; };
 		0CF881B419ABBAF600C4D76C /* MessagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesView.h; sourceTree = "<group>"; };
 		0CF881B519ABBAF600C4D76C /* MessagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesView.m; sourceTree = "<group>"; };
 		5E6E057659E14BF9B56D644D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +149,7 @@
 		0C82F7C219AB5ECF00BD7259 /* SwipeToPeep */ = {
 			isa = PBXGroup;
 			children = (
-				0C216DFF19B0763900FAF69F /* profile.png */,
+				0CDD842619B14002004AD8FA /* Profile pics */,
 				0C80596119AB97D70066C202 /* SwipeToPeepCell.h */,
 				0C80596219AB97D70066C202 /* SwipeToPeepCell.m */,
 				0CDD841B19B109D1004AD8FA /* Silly classes */,
@@ -198,6 +206,18 @@
 				0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */,
 			);
 			name = "Silly classes";
+			sourceTree = "<group>";
+		};
+		0CDD842619B14002004AD8FA /* Profile pics */ = {
+			isa = PBXGroup;
+			children = (
+				0CDD841D19B11A67004AD8FA /* mrblue.jpg */,
+				0CDD841E19B11A67004AD8FA /* mrbrown.jpg */,
+				0CDD841F19B11A67004AD8FA /* mrorange.jpg */,
+				0CDD842019B11A67004AD8FA /* mrwhite.jpg */,
+				0CDD841C19B11A67004AD8FA /* mrblonde.jpg */,
+			);
+			name = "Profile pics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +299,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C82F7D819AB5ECF00BD7259 /* Images.xcassets in Resources */,
+				0CDD842319B11A67004AD8FA /* mrbrown.jpg in Resources */,
 				0C82F7D019AB5ECF00BD7259 /* Main_iPhone.storyboard in Resources */,
 				0C82F7C719AB5ECF00BD7259 /* InfoPlist.strings in Resources */,
 				0CDD841A19B1074D004AD8FA /* SwipeToPeep-Info.plist in Resources */,
-				0C216E0019B0763900FAF69F /* profile.png in Resources */,
+				0CDD842419B11A67004AD8FA /* mrorange.jpg in Resources */,
+				0CDD842219B11A67004AD8FA /* mrblue.jpg in Resources */,
+				0CDD842119B11A67004AD8FA /* mrblonde.jpg in Resources */,
+				0CDD842519B11A67004AD8FA /* mrwhite.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
