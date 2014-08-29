@@ -23,9 +23,9 @@
 
 @interface MessagesView : UIView <UIGestureRecognizerDelegate>
 
-//@property (nonatomic) UIImage *image;
 @property (nonatomic, assign) id <MessagesViewDelegate> swipeDelegate;
 @property (nonatomic) NSString *conversationText;
 
+- (void)wireUpView;
 
 @end

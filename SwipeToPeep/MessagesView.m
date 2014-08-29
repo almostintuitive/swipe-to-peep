@@ -24,22 +24,16 @@
 @implementation MessagesView
 
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
+- (void)setConversationText:(NSString *)conversationText {
     
     self.backgroundColor = [UIColor whiteColor];
-    
-    UIScreenEdgePanGestureRecognizer *panEdgeRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    panEdgeRecognizer.edges = UIRectEdgeLeft;
-    panEdgeRecognizer.delegate = self;
-    [self addGestureRecognizer:panEdgeRecognizer];
-}
 
-- (void)setConversationText:(NSString *)conversationText {
     self.speechBubble = [[SpeechBubbleLabel alloc] initWithFrame:CGRectInset(self.bounds, 40, 40) andText:conversationText];
     [self addSubview:self.speechBubble];
     
     UIView *background = [[UIView alloc] initWithFrame:CGRectInset(self.speechBubble.frame, -10,-10)];
     background.backgroundColor = [UIColor flatGrayColor];
+    background.alpha = 0.3;
     background.layer.masksToBounds = YES;
     background.layer.cornerRadius = 5;
     [self insertSubview:background atIndex:0];
@@ -63,17 +57,20 @@
         NSLog(@"messagesView: UIGestureRecognizerStateEnded");
         [self.swipeDelegate postViewCompletedSwiping:self];
     }
-    
-    
 }
-
-
-
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
 
+
+
+- (void)wireUpView {
+    UIScreenEdgePanGestureRecognizer *panEdgeRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    panEdgeRecognizer.edges = UIRectEdgeLeft;
+    panEdgeRecognizer.delegate = self;
+    [self addGestureRecognizer:panEdgeRecognizer];
+}
 
 
 

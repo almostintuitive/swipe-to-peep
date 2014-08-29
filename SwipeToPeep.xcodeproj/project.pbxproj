@@ -27,6 +27,7 @@
 		0C9A0CFC19AB66D800AE69A1 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A0CFB19AB66D800AE69A1 /* Twitter.framework */; };
 		0C9A0CFE19AB670400AE69A1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A0CFD19AB670400AE69A1 /* Accounts.framework */; };
 		0CDD841719B0F667004AD8FA /* SpeechBubbleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */; };
+		0CDD841A19B1074D004AD8FA /* SwipeToPeep-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDD841819B1074D004AD8FA /* SwipeToPeep-Info.plist */; };
 		0CF881B619ABBAF600C4D76C /* MessagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF881B519ABBAF600C4D76C /* MessagesView.m */; };
 		69D7403613064E419C79C717 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6E057659E14BF9B56D644D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,10 +52,8 @@
 		0C82F7BC19AB5ECF00BD7259 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C82F7BE19AB5ECF00BD7259 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0C82F7C019AB5ECF00BD7259 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0C82F7C419AB5ECF00BD7259 /* SwipeToPeep.temp_caseinsensitive_rename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwipeToPeep.temp_caseinsensitive_rename-Info.plist"; sourceTree = "<group>"; };
 		0C82F7C619AB5ECF00BD7259 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C82F7C819AB5ECF00BD7259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0C82F7CA19AB5ECF00BD7259 /* SwipeToPeep.temp_caseinsensitive_rename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwipeToPeep.temp_caseinsensitive_rename-Prefix.pch"; sourceTree = "<group>"; };
 		0C82F7CB19AB5ECF00BD7259 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C82F7CC19AB5ECF00BD7259 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0C82F7CF19AB5ECF00BD7259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -70,6 +69,8 @@
 		0C9A0CFD19AB670400AE69A1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0CDD841519B0F667004AD8FA /* SpeechBubbleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechBubbleLabel.h; path = SwipeToPeep/SpeechBubbleLabel.h; sourceTree = SOURCE_ROOT; };
 		0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechBubbleLabel.m; path = SwipeToPeep/SpeechBubbleLabel.m; sourceTree = SOURCE_ROOT; };
+		0CDD841819B1074D004AD8FA /* SwipeToPeep-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SwipeToPeep-Info.plist"; path = "SwipeToPeep/SwipeToPeep-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0CDD841919B1074D004AD8FA /* SwipeToPeep-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SwipeToPeep-Prefix.pch"; path = "SwipeToPeep/SwipeToPeep-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		0CF881B419ABBAF600C4D76C /* MessagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesView.h; sourceTree = "<group>"; };
 		0CF881B519ABBAF600C4D76C /* MessagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesView.m; sourceTree = "<group>"; };
 		5E6E057659E14BF9B56D644D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,12 +171,12 @@
 		0C82F7C319AB5ECF00BD7259 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0CDD841819B1074D004AD8FA /* SwipeToPeep-Info.plist */,
+				0CDD841919B1074D004AD8FA /* SwipeToPeep-Prefix.pch */,
 				0C82F7CB19AB5ECF00BD7259 /* AppDelegate.h */,
 				0C82F7CC19AB5ECF00BD7259 /* AppDelegate.m */,
-				0C82F7C419AB5ECF00BD7259 /* SwipeToPeep.temp_caseinsensitive_rename-Info.plist */,
 				0C82F7C519AB5ECF00BD7259 /* InfoPlist.strings */,
 				0C82F7C819AB5ECF00BD7259 /* main.m */,
-				0C82F7CA19AB5ECF00BD7259 /* SwipeToPeep.temp_caseinsensitive_rename-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,6 +281,7 @@
 				0C82F7D819AB5ECF00BD7259 /* Images.xcassets in Resources */,
 				0C82F7D019AB5ECF00BD7259 /* Main_iPhone.storyboard in Resources */,
 				0C82F7C719AB5ECF00BD7259 /* InfoPlist.strings in Resources */,
+				0CDD841A19B1074D004AD8FA /* SwipeToPeep-Info.plist in Resources */,
 				0C216E0019B0763900FAF69F /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

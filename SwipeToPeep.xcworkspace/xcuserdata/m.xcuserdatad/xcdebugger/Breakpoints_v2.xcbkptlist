@@ -316,11 +316,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431028995.424485"
+            timestampString = "431029904.971037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-postView:didSwipeWithHorizontalPosition:progress:"
             landmarkType = "5">
          </BreakpointContent>
@@ -348,7 +348,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431029051.711165"
+            timestampString = "431029904.971037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -412,11 +412,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/MessagesView.m"
-            timestampString = "431029645.358384"
+            timestampString = "431030076.157951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-pan:"
             landmarkType = "5">
          </BreakpointContent>

@@ -113,6 +113,7 @@
 - (void)swipeableCellCompletedSwiping:(SwipeToPeepCell *)cell {
     self.tableView.spring.alpha = 0;
     self.postWebView.spring.center = self.view.center;
+    [self.postWebView wireUpView];
 }
 
 
