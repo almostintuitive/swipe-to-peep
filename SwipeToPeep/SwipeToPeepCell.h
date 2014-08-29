@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libHN/libHN.h>
+#import <ChameleonFramework/Chameleon.h>
+#import "CircleProfileImageView.h"
 
 @class SwipeToPeepCell;
 
@@ -25,7 +26,12 @@
 
 @interface SwipeToPeepCell : UITableViewCell <UIGestureRecognizerDelegate>
 
-@property (nonatomic) HNPost *post;
+@property (nonatomic) UIImage *conversationImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *previewLabel;
+@property (weak, nonatomic) IBOutlet CircleProfileImageView *profileImageView;
+
 
 @property (nonatomic, assign) id <SwipeableCellDelegate> delegate;
 - (void)configureSwipeableCell;

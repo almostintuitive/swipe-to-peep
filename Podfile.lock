@@ -1,7 +1,5 @@
 PODS:
-  - JSQMessagesViewController (5.2.5):
-    - JSQSystemSoundPlayer
-  - JSQSystemSoundPlayer (1.5.2)
+  - ChameleonFramework (1.1.0)
   - pop (1.0.6)
   - POP+MCAnimate (1.1):
     - pop (~> 1.0)
@@ -28,14 +26,13 @@ PODS:
   - ViewUtils (1.1.2)
 
 DEPENDENCIES:
-  - JSQMessagesViewController
+  - ChameleonFramework
   - pop
   - POP+MCAnimate
   - ViewUtils
 
 SPEC CHECKSUMS:
-  JSQMessagesViewController: ca64d32c789ac8e95b3bfb28171ff0afecf2b27b
-  JSQSystemSoundPlayer: c24914bc96ff5365b5d28b59d7ecffd60d1c5587
+  ChameleonFramework: 9dd83c1e66b4385ed15cb8c18fac12f6a56bbe0d
   pop: e518794da38942c05255eb64b36d894e70cb4f00
   POP+MCAnimate: 3ad540606cbf21547f79585c8d5b63f9da69d52b
   ViewUtils: 11aaceb3b215b3d051c2f00ae143133a71095365

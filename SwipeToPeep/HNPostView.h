@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libHN/libHN.h>
 
 @class HNPostView;
 
@@ -22,8 +21,9 @@
 @end
 
 
-@interface HNPostView : UIWebView <UIWebViewDelegate, UIGestureRecognizerDelegate>
+@interface HNPostView : UIView <UIGestureRecognizerDelegate>
 
+@property (nonatomic) UIImage *image;
 @property (nonatomic, assign) id <HNPostViewDelegate> swipeDelegate;
 
 

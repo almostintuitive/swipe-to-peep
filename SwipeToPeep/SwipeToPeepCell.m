@@ -9,33 +9,40 @@
 #import "SwipeToPeepCell.h"
 #define MCANIMATE_SHORTHAND
 #import <POP+MCAnimate.h>
+#import "CircleProfileImageView.h"
 
 #define horizontalSensitivy 0.7
 
 @interface SwipeToPeepCell ()
 
 @property (nonatomic) UIView *interactiveBackground;
-@property (nonatomic) UIView *content;
-@property (nonatomic) BOOL isDragging;
-
 
 @end
 
 @implementation SwipeToPeepCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  100)];
-        self.interactiveBackground.backgroundColor = [UIColor greenColor];
+        self.backgroundColor = [UIColor flatMintColor];
+        
+        self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  80)];
+        self.interactiveBackground.backgroundColor = [UIColor whiteColor];
         self.interactiveBackground.alpha = 0;
         [self insertSubview:self.interactiveBackground atIndex:0];
         
-        self.content = [[UIView alloc] initWithFrame:self.bounds];
-        [self addSubview:self.content];
+        self.nameLabel.textColor = [UIColor whiteColor];
+        self.nameLabel.backgroundColor = [UIColor clearColor];
+        
+        self.previewLabel.textColor = [UIColor whiteColor];
+        self.previewLabel.backgroundColor = [UIColor clearColor];
+        
+
+        
     }
     return self;
+
 }
 
 
@@ -56,17 +63,17 @@
 
 
     if ([self.delegate respondsToSelector:@selector(swipeableCellDidStartSwiping:)] && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        [self changeBackgroundColorBasedOnProgress:1];
         [self.delegate swipeableCellDidStartSwiping:self];
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
         [self changeBackgroundColorBasedOnProgress:progress];
         [self.delegate swipeableCell:self didSwipeWithHorizontalPosition:touchLocation.x progress:progress];
-        
-
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self changeBackgroundColorBasedOnProgress:0];
         if (progress >= horizontalSensitivy || touchVelocity.x < -300) {
             [self.delegate swipeableCellCompletedSwiping:self];
         } else {
@@ -75,6 +82,7 @@
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateCancelled || gestureRecognizer.state == UIGestureRecognizerStateFailed) {
+        [self changeBackgroundColorBasedOnProgress:0];
         [self.delegate swipeableCellCancelledSwiping:self];
     }
 }
@@ -107,7 +115,15 @@
 - (void)changeBackgroundColorBasedOnProgress:(float)progress {
     
     self.interactiveBackground.alpha = progress;
-    
+
+}
+
+
+- (void)didMoveToSuperview {
+    self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  self.bounds.size.height)];
+    self.interactiveBackground.backgroundColor = [UIColor whiteColor];
+    self.interactiveBackground.alpha = 0;
+    [self insertSubview:self.interactiveBackground atIndex:0];
 }
 
 

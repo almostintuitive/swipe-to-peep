@@ -1,7 +1,7 @@
 CLANG_CXX_LANGUAGE_STANDARD = c++11
 CLANG_CXX_LIBRARY = libc++
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/JSQMessagesViewController" "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" "${PODS_ROOT}/Headers/POP+MCAnimate" "${PODS_ROOT}/Headers/ViewUtils" "${PODS_ROOT}/Headers/pop"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/JSQMessagesViewController" -isystem "${PODS_ROOT}/Headers/JSQSystemSoundPlayer" -isystem "${PODS_ROOT}/Headers/POP+MCAnimate" -isystem "${PODS_ROOT}/Headers/ViewUtils" -isystem "${PODS_ROOT}/Headers/pop"
-OTHER_LDFLAGS = -ObjC -lc++ -framework AudioToolbox -framework CoreGraphics -framework QuartzCore
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ChameleonFramework" "${PODS_ROOT}/Headers/POP+MCAnimate" "${PODS_ROOT}/Headers/ViewUtils" "${PODS_ROOT}/Headers/pop"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/ChameleonFramework" -isystem "${PODS_ROOT}/Headers/POP+MCAnimate" -isystem "${PODS_ROOT}/Headers/ViewUtils" -isystem "${PODS_ROOT}/Headers/pop"
+OTHER_LDFLAGS = -ObjC -lc++ -framework CoreGraphics -framework QuartzCore
 PODS_ROOT = ${SRCROOT}/Pods

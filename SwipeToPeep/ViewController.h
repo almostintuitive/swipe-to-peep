@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SwipeToPeepCell.h"
 #import "HNPostView.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SwipeableCellDelegate, HNPostViewDelegate>
 

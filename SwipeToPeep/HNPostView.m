@@ -7,15 +7,13 @@
 //
 
 #import "HNPostView.h"
-#import "HNPostManager.h"
 #define MCANIMATE_SHORTHAND
 #import <POP+MCAnimate.h>
 
 
 @interface HNPostView ()
 
-@property (nonatomic) UIView *loadingOverlay;
-@property (nonatomic) UILabel *postTitle;
+@property (nonatomic) UIImageView *imageView;
 
 @end
 
@@ -23,38 +21,21 @@
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    self.backgroundColor = [UIColor redColor];
     
-    self.delegate = self;
-    
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[HNPostManager sharedManager].activePost.UrlString]];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
-     {
-         if ([data length] > 0 && error == nil) [self loadRequest:request];
-         else if (error != nil) NSLog(@"Error: %@", error);
-     }];
-    
-    
-    self.loadingOverlay = [[UIView alloc] initWithFrame:self.bounds];
-    self.loadingOverlay.backgroundColor = [UIColor blackColor];
-    self.loadingOverlay.alpha = 0.5;
-    [self addSubview:self.loadingOverlay];
-        
-    self.postTitle = [[UILabel alloc] initWithFrame:CGRectInset(self.bounds, 40, 40)];
-    self.postTitle.textColor = [UIColor whiteColor];
-    self.postTitle.textAlignment = NSTextAlignmentCenter;
-    self.postTitle.text = [HNPostManager sharedManager].activePost.Title;
-    self.postTitle.numberOfLines = 5;
-    [self addSubview:self.postTitle];
+    self.backgroundColor = [UIColor whiteColor];
     
     UIScreenEdgePanGestureRecognizer *panEdgeRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     panEdgeRecognizer.edges = UIRectEdgeLeft;
     panEdgeRecognizer.delegate = self;
     [self addGestureRecognizer:panEdgeRecognizer];
-    
-    
+}
+
+
+- (void)setImage:(UIImage *)image {
+    self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.image = image;
+    [self addSubview:self.imageView];
 }
 
 
@@ -65,7 +46,6 @@
     NSLog(@"%fl", progress);
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        self.scrollView.scrollEnabled = NO;
         [self.swipeDelegate postViewDidStartSwiping:self];
     }
     
@@ -74,12 +54,10 @@
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        self.scrollView.scrollEnabled = YES;
         [self.swipeDelegate postViewCompletedSwiping:self];
     }
     
     if (gestureRecognizer.state == UIGestureRecognizerStateCancelled || gestureRecognizer.state == UIGestureRecognizerStateFailed) {
-        self.scrollView.scrollEnabled = YES;
         [self.swipeDelegate postViewCancelledSwiping:self];
     }
     
@@ -95,17 +73,5 @@
 
 
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    
-    [NSObject animate:^{
-        self.loadingOverlay.easeInEaseOut.alpha = 0;
-        self.postTitle.easeInEaseOut.alpha = 0;
-    } completion:^(BOOL finished) {
-        [self.loadingOverlay removeFromSuperview];
-        [self.postTitle removeFromSuperview];
-    }];
-    
-
-}
 
 @end
