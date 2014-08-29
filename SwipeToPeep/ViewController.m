@@ -18,7 +18,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) MessagesView *postWebView;
-@property (nonatomic) NSArray *threadMsgImagesArray;
 @property (nonatomic) NSArray *threadMsgNamesArray;
 @property (nonatomic) NSArray *threadMsgDescriptionArray;
 
@@ -35,7 +34,6 @@
     self.view.backgroundColor = [UIColor flatMintColor];
     self.tableView.backgroundColor = [UIColor flatMintColor];
     
-    self.threadMsgImagesArray = @[[UIImage imageNamed:@"thread-1.jpg"],[UIImage imageNamed:@"thread-2.jpg"],[UIImage imageNamed:@"thread-3.jpg"]];
     self.threadMsgNamesArray = @[@"Mr Pink", @"Lt Aldo Raine", @"Mr Blonde"];
     self.threadMsgDescriptionArray = @[@"F*** you, White! I didn’t create the situation, I’m just dealin’ with it! You’re acting like a first year f***ing theif – I’m acting like a professional!",
                                        @"Yeah, in a basement. You know, fightin’ in a basement offers a lot of difficulties. Number one being, you’re fightin’ in a basement!",
@@ -49,7 +47,7 @@
 #pragma mark TableView dataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.threadMsgImagesArray.count;
+    return self.threadMsgDescriptionArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +55,6 @@
     
     cell.delegate = self;
     
-    cell.conversationImage = self.threadMsgImagesArray[indexPath.row];
     cell.nameLabel.text = self.threadMsgNamesArray[indexPath.row];
     cell.previewLabel.text = self.threadMsgDescriptionArray[indexPath.row];
     

@@ -62,28 +62,20 @@
         
 
 
-    if ([self.delegate respondsToSelector:@selector(swipeableCellDidStartSwiping:)] && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         [self changeBackgroundColorBasedOnProgress:1];
         [self.delegate swipeableCellDidStartSwiping:self];
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
         [self changeBackgroundColorBasedOnProgress:progress];
         [self.delegate swipeableCell:self didSwipeWithHorizontalPosition:touchLocation.x progress:progress];
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"cell: UIGestureRecognizerStateEnded");
         [self changeBackgroundColorBasedOnProgress:0];
         if (progress >= horizontalSensitivy || touchVelocity.x < -300) {
             [self.delegate swipeableCellCompletedSwiping:self];
         } else {
             [self.delegate swipeableCellCancelledSwiping:self];
         }
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateCancelled || gestureRecognizer.state == UIGestureRecognizerStateFailed) {
-        [self changeBackgroundColorBasedOnProgress:0];
-        [self.delegate swipeableCellCancelledSwiping:self];
     }
 }
 

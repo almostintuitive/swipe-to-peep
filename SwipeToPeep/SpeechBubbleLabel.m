@@ -15,9 +15,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.text = text;
-        self.backgroundColor = [UIColor flatGrayColor];
-        self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 5;
+        self.numberOfLines = 100;
+        [self sizeToFit];
+        self.backgroundColor = [UIColor clearColor];
         
     }
     return self;
