@@ -9,33 +9,35 @@
 #import "SwipeToPeepCell.h"
 #define MCANIMATE_SHORTHAND
 #import <POP+MCAnimate.h>
+#import "CircleProfileImageView.h"
 
 #define horizontalSensitivy 0.7
 
 @interface SwipeToPeepCell ()
 
 @property (nonatomic) UIView *interactiveBackground;
-@property (nonatomic) UIView *content;
-@property (nonatomic) BOOL isDragging;
-
 
 @end
 
 @implementation SwipeToPeepCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  100)];
-        self.interactiveBackground.backgroundColor = [UIColor greenColor];
-        self.interactiveBackground.alpha = 0;
-        [self insertSubview:self.interactiveBackground atIndex:0];
+        self.backgroundColor = [UIColor whiteColor];
         
-        self.content = [[UIView alloc] initWithFrame:self.bounds];
-        [self addSubview:self.content];
+        self.nameLabel.textColor = [UIColor whiteColor];
+        self.nameLabel.backgroundColor = [UIColor clearColor];
+        
+        self.previewLabel.textColor = [UIColor whiteColor];
+        self.previewLabel.backgroundColor = [UIColor clearColor];
+        
+
+        
     }
     return self;
+
 }
 
 
@@ -53,29 +55,21 @@
     CGPoint touchVelocity = [gestureRecognizer velocityInView:nil];
     float progress = 1- (touchLocation.x / self.frame.size.width);
         
-
-
-    if ([self.delegate respondsToSelector:@selector(swipeableCellDidStartSwiping:)] && gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        [self changeBackgroundColorBasedOnProgress:1];
         [self.delegate swipeableCellDidStartSwiping:self];
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        NSLog(@"cell: UIGestureRecognizerStateBegan");
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
         [self changeBackgroundColorBasedOnProgress:progress];
         [self.delegate swipeableCell:self didSwipeWithHorizontalPosition:touchLocation.x progress:progress];
-        
-
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+    } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"cell: UIGestureRecognizerStateEnded");
+        [self changeBackgroundColorBasedOnProgress:0];
         if (progress >= horizontalSensitivy || touchVelocity.x < -300) {
             [self.delegate swipeableCellCompletedSwiping:self];
         } else {
             [self.delegate swipeableCellCancelledSwiping:self];
         }
-    }
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateCancelled || gestureRecognizer.state == UIGestureRecognizerStateFailed) {
-        [self.delegate swipeableCellCancelledSwiping:self];
     }
 }
 
@@ -89,17 +83,21 @@
 
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint point = [gestureRecognizer velocityInView:nil];
-    
-    if (point.x > 0) {
+    if ([gestureRecognizer class] == [UIPanGestureRecognizer class]) {
+        CGPoint point = [gestureRecognizer velocityInView:nil];
+        
+        if (point.x > 0) {
+            return NO;
+        }
+        
+        if (fabsf(point.x) > fabsf(point.y) ) {
+            return YES;
+        }
+        
         return NO;
     }
-    
-    if (fabsf(point.x) > fabsf(point.y) ) {
-        return YES;
-    }
-    
-    return NO;
+    return YES;
+
 }
 
 #pragma mark Private methods
@@ -107,7 +105,15 @@
 - (void)changeBackgroundColorBasedOnProgress:(float)progress {
     
     self.interactiveBackground.alpha = progress;
-    
+
+}
+
+
+- (void)didMoveToSuperview {
+    self.interactiveBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  self.bounds.size.height)];
+    self.interactiveBackground.backgroundColor = [UIColor flatGrayColor];
+    self.interactiveBackground.alpha = 0;
+    [self insertSubview:self.interactiveBackground atIndex:0];
 }
 
 

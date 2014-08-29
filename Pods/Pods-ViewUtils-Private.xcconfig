@@ -1,5 +1,5 @@
 #include "Pods-ViewUtils.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ViewUtils" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/POP+MCAnimate" "${PODS_ROOT}/Headers/TWTToast" "${PODS_ROOT}/Headers/ViewUtils" "${PODS_ROOT}/Headers/libHN" "${PODS_ROOT}/Headers/pop"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ViewUtils" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ChameleonFramework" "${PODS_ROOT}/Headers/POP+MCAnimate" "${PODS_ROOT}/Headers/ViewUtils" "${PODS_ROOT}/Headers/pop"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}
