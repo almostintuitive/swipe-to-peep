@@ -236,43 +236,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431028995.424485"
+            timestampString = "431032667.708966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-swipeableCellCancelledSwiping:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431028995.424485"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-swipeableCellCancelledSwiping:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431028995.424485"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-swipeableCellCancelledSwiping:"
             landmarkType = "5">
          </BreakpointContent>
@@ -316,43 +284,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431029904.971037"
+            timestampString = "431032667.708966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "-postView:didSwipeWithHorizontalPosition:progress:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431029050.572725"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-swipeableCellCancelledSwiping:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "swipeToPeep/ViewController.m"
-            timestampString = "431029904.971037"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "-swipeableCellCompletedSwiping:"
             landmarkType = "5">
          </BreakpointContent>
@@ -364,11 +300,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/SwipeToPeepCell.m"
-            timestampString = "431029369.117655"
+            timestampString = "431032927.592658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-pan:"
             landmarkType = "5">
          </BreakpointContent>
@@ -380,11 +316,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/SwipeToPeepCell.m"
-            timestampString = "431029645.358384"
+            timestampString = "431032927.592658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-pan:"
             landmarkType = "5">
          </BreakpointContent>
@@ -396,11 +332,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/SwipeToPeepCell.m"
-            timestampString = "431029645.358384"
+            timestampString = "431032927.592658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-pan:"
             landmarkType = "5">
          </BreakpointContent>
@@ -412,11 +348,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swipeToPeep/MessagesView.m"
-            timestampString = "431030076.157951"
+            timestampString = "431032927.592658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-pan:"
             landmarkType = "5">
          </BreakpointContent>

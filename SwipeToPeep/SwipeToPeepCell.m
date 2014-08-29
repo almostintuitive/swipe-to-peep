@@ -60,11 +60,10 @@
     CGPoint touchVelocity = [gestureRecognizer velocityInView:nil];
     float progress = 1- (touchLocation.x / self.frame.size.width);
         
-
-
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         [self changeBackgroundColorBasedOnProgress:1];
         [self.delegate swipeableCellDidStartSwiping:self];
+        NSLog(@"cell: UIGestureRecognizerStateBegan");
     } else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
         [self changeBackgroundColorBasedOnProgress:progress];
         [self.delegate swipeableCell:self didSwipeWithHorizontalPosition:touchLocation.x progress:progress];
@@ -102,7 +101,7 @@
         
         return NO;
     }
-    return NO;
+    return YES;
 
 }
 

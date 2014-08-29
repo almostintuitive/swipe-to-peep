@@ -104,19 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C2C707819AD3BF500C51E56 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0CDD841519B0F667004AD8FA /* SpeechBubbleLabel.h */,
-				0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */,
-				0CF881B419ABBAF600C4D76C /* MessagesView.h */,
-				0CF881B519ABBAF600C4D76C /* MessagesView.m */,
-				0C82F7D419AB5ECF00BD7259 /* ViewController.h */,
-				0C82F7D519AB5ECF00BD7259 /* ViewController.m */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
 		0C82F7B019AB5ECF00BD7259 = {
 			isa = PBXGroup;
 			children = (
@@ -157,10 +144,12 @@
 				0C216DFF19B0763900FAF69F /* profile.png */,
 				0C80596119AB97D70066C202 /* SwipeToPeepCell.h */,
 				0C80596219AB97D70066C202 /* SwipeToPeepCell.m */,
-				0C216E0119B07D8D00FAF69F /* CircleProfileImageView.h */,
-				0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */,
+				0CDD841B19B109D1004AD8FA /* Silly classes */,
+				0CF881B419ABBAF600C4D76C /* MessagesView.h */,
+				0CF881B519ABBAF600C4D76C /* MessagesView.m */,
+				0C82F7D419AB5ECF00BD7259 /* ViewController.h */,
+				0C82F7D519AB5ECF00BD7259 /* ViewController.m */,
 				0C82F7CE19AB5ECF00BD7259 /* Main_iPhone.storyboard */,
-				0C2C707819AD3BF500C51E56 /* ViewControllers */,
 				0C82F7D719AB5ECF00BD7259 /* Images.xcassets */,
 				0C82F7C319AB5ECF00BD7259 /* Supporting Files */,
 			);
@@ -198,6 +187,17 @@
 				0C82F7E719AB5ED000BD7259 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CDD841B19B109D1004AD8FA /* Silly classes */ = {
+			isa = PBXGroup;
+			children = (
+				0CDD841519B0F667004AD8FA /* SpeechBubbleLabel.h */,
+				0CDD841619B0F667004AD8FA /* SpeechBubbleLabel.m */,
+				0C216E0119B07D8D00FAF69F /* CircleProfileImageView.h */,
+				0C216E0219B07D8D00FAF69F /* CircleProfileImageView.m */,
+			);
+			name = "Silly classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

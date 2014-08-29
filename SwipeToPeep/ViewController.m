@@ -92,21 +92,11 @@
 
 
 - (void)swipeableCell:(SwipeToPeepCell *)cell didSwipeWithHorizontalPosition:(CGFloat)horizontalPosition progress:(float)progress {
-    self.tableView.spring.alpha = (1-progress);
-    self.tableView.spring.center = CGPointMake(self.view.center.x*(1-progress), self.view.center.y);
-    self.postWebView.spring.center = CGPointMake(self.view.center.x+(self.view.bounds.size.width*(1-progress)), self.view.center.y);
+    [self adjustViewBasedOnSwipeProgress:(1-progress)];
 }
 
 - (void)swipeableCellCancelledSwiping:(SwipeToPeepCell *)cell {
-    self.tableView.scrollEnabled = YES;
-    [NSObject animate:^{
-        self.tableView.spring.alpha = 1;
-        self.tableView.spring.center = self.view.center;
-        self.postWebView.spring.center = CGPointMake(self.view.bounds.size.width+self.view.center.x, self.view.center.y);
-    } completion:^(BOOL finished) {
-        [self.postWebView removeFromSuperview];
-        self.postWebView = nil;
-    }];
+    [self showTableView];
 }
 
 
@@ -128,10 +118,7 @@
 }
 
 - (void)postView:(MessagesView *)postView didSwipeWithHorizontalPosition:(CGFloat)horizontalPosition progress:(float)progress {
-    self.tableView.spring.alpha = progress;
-    self.tableView.spring.center = CGPointMake(self.view.center.x*progress, self.view.center.y);
-    self.postWebView.spring.center = CGPointMake(self.view.center.x+(self.view.bounds.size.width*progress), self.view.center.y);
-
+    [self adjustViewBasedOnSwipeProgress:progress];
 }
 
 
@@ -144,20 +131,29 @@
 
 
 - (void)postViewCompletedSwiping:(MessagesView *)postView {
-    self.tableView.scrollEnabled = YES;
-    
-    [NSObject animate:^{
-        self.postWebView.spring.center = CGPointMake(self.view.center.x+self.view.bounds.size.width, self.view.center.y);
-        self.tableView.spring.alpha = 1;
-        self.tableView.spring.center = self.view.center;
-    } completion:^(BOOL finished) {
-        [self.postWebView removeFromSuperview];
-        self.postWebView = nil;
-    }];
-
+    [self showTableView];
 }
 
 
 
+#pragma mark Adjust view based on progress
+
+- (void)adjustViewBasedOnSwipeProgress:(float)progress {
+    self.tableView.spring.alpha = progress;
+    self.tableView.spring.center = CGPointMake(self.view.center.x*progress, self.view.center.y);
+    self.postWebView.spring.center = CGPointMake(self.view.center.x+(self.view.bounds.size.width*progress), self.view.center.y);
+}
+
+- (void)showTableView {
+    self.tableView.scrollEnabled = YES;
+    [NSObject animate:^{
+        self.tableView.spring.alpha = 1;
+        self.tableView.spring.center = self.view.center;
+        self.postWebView.spring.center = CGPointMake(self.view.bounds.size.width+self.view.center.x, self.view.center.y);
+    } completion:^(BOOL finished) {
+        [self.postWebView removeFromSuperview];
+        self.postWebView = nil;
+    }];
+}
 
 @end

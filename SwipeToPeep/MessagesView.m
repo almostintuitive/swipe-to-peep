@@ -52,7 +52,6 @@
         [self.swipeDelegate postViewDidStartSwiping:self];
     } else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
         [self.swipeDelegate postView:self didSwipeWithHorizontalPosition:touchLocation.x progress:progress];
-    
     } else if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         NSLog(@"messagesView: UIGestureRecognizerStateEnded");
         [self.swipeDelegate postViewCompletedSwiping:self];
