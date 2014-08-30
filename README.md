@@ -1,7 +1,7 @@
 SwipeToPeep prototype
 --------------------
 
-![animation](https://github.com/itchingpixels/SwipeToPeep/github-assets/interaction-1.gif)
+![animation](https://raw.github.com/itchingpixels/SwipeToPeep/github-assets/interaction-1.gif)
 
 
 Please find the original article here:
