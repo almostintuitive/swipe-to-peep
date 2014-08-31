@@ -6,12 +6,9 @@ SwipeToPeep prototype
 
 Please find the original article here:
 
+[http://itchingpixels.com/anatomy-of-a-touch-interaction-swipe-to-peep/](http://itchingpixels.com/anatomy-of-a-touch-interaction-swipe-to-peep/)
 
-
-```objc
-
-
-```
+There's a branch called hackernews that has a HN client implemented with the same interaction. Have a look!
 
 
 
